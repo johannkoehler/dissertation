@@ -8,6 +8,8 @@ head(dat[field=="CR"], 50)
 setkey(dat,field,id) # key the database on the field to let me query things quickly by field
 
 
+# Data Audit --------------------------------------------------------------
+dat['UT'][duplicated(val),val] %>% cat(sep='\n')
 
 # Descriptives ------------------------------------------------------------
 
